@@ -1,0 +1,60 @@
+Microwave Body Composition Assessment - Deterministic Baselines
+Run Date: 2026-02-26 00:38:00
+
+========================================
+Model: Random Forest
+Overall Accuracy: 85.93%
+
+Confusion Matrix:
+[[115  65]
+ [ 11 349]]
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+   Reference       0.91      0.64      0.75       180
+       Tumor       0.84      0.97      0.90       360
+
+    accuracy                           0.86       540
+   macro avg       0.88      0.80      0.83       540
+weighted avg       0.87      0.86      0.85       540
+
+
+========================================
+Model: XGBoost
+Overall Accuracy: 88.70%
+
+Confusion Matrix:
+[[132  48]
+ [ 13 347]]
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+   Reference       0.91      0.73      0.81       180
+       Tumor       0.88      0.96      0.92       360
+
+    accuracy                           0.89       540
+   macro avg       0.89      0.85      0.87       540
+weighted avg       0.89      0.89      0.88       540
+
+
+========================================
+Model: Fully Connected NN
+Overall Accuracy: 92.04%
+
+Confusion Matrix:
+[[144  36]
+ [  7 353]]
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+   Reference       0.95      0.80      0.87       180
+       Tumor       0.91      0.98      0.94       360
+
+    accuracy                           0.92       540
+   macro avg       0.93      0.89      0.91       540
+weighted avg       0.92      0.92      0.92       540
+
+
