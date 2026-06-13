@@ -1,12 +1,56 @@
-# PyCharm & Environment
-.idea/
-.venv/
-__pycache__/
-
-# Datasets
+# ── Raw data (25 GB, not redistributable) ────────────────────────────────────
 Datafiles/
+
+# ── Large intermediate / binary files ────────────────────────────────────────
+outputs/processed_data.pkl
+*.zip
+*.pdf
+
+# ── Private working documents ─────────────────────────────────────────────────
+supervisor_meeting_notes.txt
+thesis_prompt.txt
+meeting_prep/
+viktor_analysis/
+final/
+work_done.txt
+SUPERVISOR_REPORT_*.txt
+DETAILED_METHODOLOGY_EXPLANATION.txt
+
+# ── Unrelated sub-projects ────────────────────────────────────────────────────
+LymphTrack/
 Intro/
 Proposal/
-AI-Integrated_Noninvasive_Microwave_Sensor_System_for_ARDS_Diagnosis.pdf
-s41598-025-20566-w.pdf
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# ── LaTeX build artifacts (keep .tex and figures, not compiler output) ─────────
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.lof
+latex/*.lot
+latex/*.synctex.gz
+latex/*.fls
+latex/*.fdb_latexmk
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
 .DS_Store
+**/.DS_Store
+
+# ── Jupyter / R ───────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.Rhistory
+
+# ── IDEs ─────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+.venv/
+venv/
+env/

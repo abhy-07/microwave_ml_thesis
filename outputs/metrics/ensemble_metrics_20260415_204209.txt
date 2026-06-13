@@ -1,0 +1,38 @@
+=================================================================
+Deep Ensemble (5 members) — Uncertainty-Aware Regression
+Run: 2026-04-15 20:42:09
+Train vols: 1-14 | Val vols: 15-18 | Members=5
+=================================================================
+
+Target: Skin_mm
+  RMSE      : 0.7039
+  MAE       : 0.6321
+  R²        : -4.6320
+  PICP 95%  : 0.7870  (ideal = 0.95)
+  MPIW 95%  : 1.9308
+  ECE       : 0.2167  (ideal = 0.0)
+  NLL       : 1.2457
+  Mean epistemic σ : 0.1673
+  Mean aleatoric σ : 0.4259
+
+Target: Fat_mm
+  RMSE      : 6.4083
+  MAE       : 6.4037
+  R²        : -844.9882
+  PICP 95%  : 1.0000  (ideal = 0.95)
+  MPIW 95%  : 19.6829
+  ECE       : 0.3015  (ideal = 0.0)
+  NLL       : 3.3927
+  Mean epistemic σ : 0.8222
+  Mean aleatoric σ : 4.8493
+
+Target: Muscle_cm2
+  RMSE      : 1.9674
+  MAE       : 1.6048
+  R²        : -1.5991
+  PICP 95%  : 1.0000  (ideal = 0.95)
+  MPIW 95%  : 8.8579
+  ECE       : 0.0370  (ideal = 0.0)
+  NLL       : 2.1173
+  Mean epistemic σ : 0.6433
+  Mean aleatoric σ : 2.1160

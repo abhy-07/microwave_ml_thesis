@@ -1,0 +1,55 @@
+Baseline Cross-Validation Summary (GroupKFold on volunteer_id)
+Folds: 4 | Volunteers: 4 groups
+=================================================================
+
+                            RMSE             MAE              R2        
+                            mean     std    mean     std    mean     std
+model         target                                                    
+FCNN          Fat_mm      5.7704  0.8436  4.3305  0.4304 -4.2725  7.4127
+              Muscle_cm2  2.2182  1.0098  1.7829  0.7370 -3.4598  4.0835
+              Skin_mm     0.4276  0.0284  0.3506  0.0234 -1.5397  1.5902
+Random Forest Fat_mm      5.7027  0.5126  4.1540  0.1292 -4.1358  7.1768
+              Muscle_cm2  2.0884  0.9585  1.6751  0.7312 -2.8338  3.1072
+              Skin_mm     0.3485  0.0465  0.2893  0.0286 -0.7826  1.3831
+XGBoost       Fat_mm      5.7975  0.5818  4.1818  0.2077 -4.4112  7.6669
+              Muscle_cm2  2.2220  1.0020  1.7484  0.7591 -3.8307  4.9035
+              Skin_mm     0.3426  0.0420  0.2790  0.0228 -0.6920  1.2231
+
+Full fold-by-fold results:
+        model     target  fold     RMSE      MAE         R2
+Random Forest    Skin_mm     1 0.394401 0.286046  -0.552285
+Random Forest     Fat_mm     1 5.011966 4.023607 -14.895815
+Random Forest Muscle_cm2     1 3.347252 2.486734  -1.666991
+      XGBoost    Skin_mm     1 0.395274 0.287909  -0.559164
+      XGBoost     Fat_mm     1 5.168958 3.953696 -15.907230
+      XGBoost Muscle_cm2     1 3.347059 2.470807  -1.666683
+         FCNN    Skin_mm     1 0.469216 0.368212  -1.197061
+         FCNN     Fat_mm     1 5.088230 4.199724 -15.383242
+         FCNN Muscle_cm2     1 3.430434 2.538143  -1.801192
+Random Forest    Skin_mm     2 0.284210 0.250212   0.116139
+Random Forest     Fat_mm     2 5.621322 4.165673  -0.675217
+Random Forest Muscle_cm2     2 1.358039 1.035837  -0.627559
+      XGBoost    Skin_mm     2 0.293174 0.244836   0.059506
+      XGBoost     Fat_mm     2 5.437698 4.063174  -0.567562
+      XGBoost Muscle_cm2     2 1.358527 1.055750  -0.628726
+         FCNN    Skin_mm     2 0.407764 0.323797  -0.819384
+         FCNN     Fat_mm     2 4.994483 3.834121  -0.322439
+         FCNN Muscle_cm2     2 1.719960 1.392065  -1.610648
+Random Forest    Skin_mm     3 0.351399 0.312888   0.109155
+Random Forest     Fat_mm     3 6.032379 4.099706  -0.235745
+Random Forest Muscle_cm2     3 2.323317 2.099716  -7.439755
+      XGBoost    Skin_mm     3 0.334769 0.292852   0.191476
+      XGBoost     Fat_mm     3 6.254337 4.394926  -0.328355
+      XGBoost Muscle_cm2     3 2.786431 2.336331 -11.139740
+         FCNN    Skin_mm     3 0.421942 0.371970  -0.284423
+         FCNN     Fat_mm     3 6.451810 4.425391  -0.413562
+         FCNN Muscle_cm2     3 2.598255 2.248773  -9.555440
+Random Forest    Skin_mm     4 0.363984 0.308200  -2.803252
+Random Forest     Fat_mm     4 6.145254 4.327106  -0.736336
+Random Forest Muscle_cm2     4 1.324987 1.078249  -1.600886
+      XGBoost    Skin_mm     4 0.347161 0.290267  -2.459802
+      XGBoost     Fat_mm     4 6.328807 4.315553  -0.841610
+      XGBoost Muscle_cm2     4 1.396168 1.130755  -1.887842
+         FCNN    Skin_mm     4 0.411371 0.338298  -3.858001
+         FCNN     Fat_mm     4 6.547040 4.862750  -0.970807
+         FCNN Muscle_cm2     4 1.124101 0.952731  -0.872012

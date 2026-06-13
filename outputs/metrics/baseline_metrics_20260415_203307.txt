@@ -1,0 +1,22 @@
+Uncertainty-Aware ML — Microwave Body Composition
+Run: 2026-04-15 20:33:07
+Task: Regression → ['Skin_mm', 'Fat_mm', 'Muscle_cm2']
+============================================================
+
+Model: Random Forest
+    target     RMSE      MAE          R2
+   Skin_mm 0.583842 0.498750   -2.874156
+    Fat_mm 3.240196 2.761628 -215.285613
+Muscle_cm2 1.454139 1.216540   -0.419923
+
+Model: XGBoost
+    target     RMSE      MAE          R2
+   Skin_mm 0.560352 0.478657   -2.568677
+    Fat_mm 3.035074 2.554178 -188.768295
+Muscle_cm2 1.518077 1.222576   -0.547535
+
+Model: FCNN
+    target     RMSE      MAE          R2
+   Skin_mm 0.592163 0.517497   -2.985371
+    Fat_mm 3.818051 3.094372 -299.309113
+Muscle_cm2 2.140642 1.699152   -2.077095

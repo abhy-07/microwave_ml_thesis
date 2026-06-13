@@ -1,0 +1,42 @@
+============================================================
+MC Dropout Neural Network — Uncertainty-Aware Inference
+Run Date : 2026-03-03 20:17:26
+Run Tag  : mc_dropout_smoketest
+============================================================
+
+Total test samples   : 405
+Uncertain (var>0.05): 0 (0.0%)
+
+--- All Predictions ---
+              precision    recall  f1-score   support
+
+   Reference       0.50      0.53      0.52       202
+       Tumor       0.51      0.47      0.49       203
+
+    accuracy                           0.50       405
+   macro avg       0.50      0.50      0.50       405
+weighted avg       0.50      0.50      0.50       405
+
+--- Certain Predictions (405 samples) ---
+Accuracy (certain only): 50.37%
+              precision    recall  f1-score   support
+
+   Reference       0.50      0.53      0.52       202
+       Tumor       0.51      0.47      0.49       203
+
+    accuracy                           0.50       405
+   macro avg       0.50      0.50      0.50       405
+weighted avg       0.50      0.50      0.50       405
+
+--- Uncertainty Score Statistics ---
+  Mean variance : 0.00606
+  Std  variance : 0.00180
+  Max  variance : 0.01372
+  Min  variance : 0.00256
+
+--- Training History (final epoch) ---
+  Final train loss : 0.0541
+  Final val loss   : 1.7376
+  Final val acc    : 46.91%
+  Best  val loss   : 0.6948  (epoch 1)
+============================================================

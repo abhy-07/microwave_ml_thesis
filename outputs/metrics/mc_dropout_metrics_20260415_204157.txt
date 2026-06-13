@@ -1,0 +1,39 @@
+=================================================================
+MC Dropout — Uncertainty-Aware Regression Results
+Run: 2026-04-15 20:41:57
+T (stochastic passes) = 50
+Train vols: 1-14 | Val vols: 15-18 | T=50
+=================================================================
+
+Target: Skin_mm
+  RMSE      : 0.6999
+  MAE       : 0.6324
+  R²        : -4.5673
+  PICP 95%  : 0.8611  (ideal = 0.95)
+  MPIW 95%  : 2.0226
+  ECE       : 0.2083  (ideal = 0.0)
+  NLL       : 1.1911
+  Mean epistemic σ : 0.2589
+  Mean aleatoric σ : 0.4455
+
+Target: Fat_mm
+  RMSE      : 5.0587
+  MAE       : 5.0455
+  R²        : -526.1812
+  PICP 95%  : 1.0000  (ideal = 0.95)
+  MPIW 95%  : 36.4874
+  ECE       : 0.2037  (ideal = 0.0)
+  NLL       : 3.2984
+  Mean epistemic σ : 0.6998
+  Mean aleatoric σ : 9.2810
+
+Target: Muscle_cm2
+  RMSE      : 1.3538
+  MAE       : 1.1061
+  R²        : -0.2307
+  PICP 95%  : 1.0000  (ideal = 0.95)
+  MPIW 95%  : 7.9774
+  ECE       : 0.1120  (ideal = 0.0)
+  NLL       : 1.8447
+  Mean epistemic σ : 0.6180
+  Mean aleatoric σ : 1.9370

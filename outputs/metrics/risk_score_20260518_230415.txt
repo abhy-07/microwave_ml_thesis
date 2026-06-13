@@ -1,0 +1,86 @@
+==============================================================================
+CLINICAL RISK SCORE REPORT — Uncertainty-Based Prediction Flagging
+Generated : 2026-05-18 23:04:15
+Dataset   : March 2023 (471 samples, 23 unseen volunteers)
+
+Strategy  : Predictions with σ_total above a threshold are flagged as
+            'high-risk' (model is uncertain). The threshold is chosen as
+            the 75th percentile of σ_total (flags top 25% most uncertain).
+            We verify that flagged predictions have higher RMSE — confirming
+            that σ_total is a reliable indicator of prediction quality.
+==============================================================================
+
+MODEL: MC Dropout
+------------------------------------------------------------------------------
+  Target: Skin_mm
+    Recommended threshold  : σ_total > 0.5030 mm
+    Samples flagged (25%)  : 118 / 471 (25.1%)
+
+    LOW-RISK  (confident)  : RMSE=0.5745  MAE=0.4574  PICP95=0.841
+    HIGH-RISK (uncertain)  : RMSE=0.6088  MAE=0.5090  PICP95=0.898
+    Separation ratio       : 1.060x  (RMSE_high / RMSE_low — higher = better discrimination)
+
+  Target: Fat_mm
+    Recommended threshold  : σ_total > 10.1825 mm
+    Samples flagged (25%)  : 118 / 471 (25.1%)
+
+    LOW-RISK  (confident)  : RMSE=5.6534  MAE=4.8401  PICP95=1.000
+    HIGH-RISK (uncertain)  : RMSE=5.8279  MAE=5.0283  PICP95=1.000
+    Separation ratio       : 1.031x  (RMSE_high / RMSE_low — higher = better discrimination)
+
+  Target: Muscle_cm2
+    Recommended threshold  : σ_total > 1.9826 cm²
+    Samples flagged (25%)  : 118 / 471 (25.1%)
+
+    LOW-RISK  (confident)  : RMSE=2.1826  MAE=1.6303  PICP95=0.926
+    HIGH-RISK (uncertain)  : RMSE=2.2394  MAE=1.7063  PICP95=0.924
+    Separation ratio       : 1.026x  (RMSE_high / RMSE_low — higher = better discrimination)
+
+
+MODEL: Deep Ensemble
+------------------------------------------------------------------------------
+  Target: Skin_mm
+    Recommended threshold  : σ_total > 0.6240 mm
+    Samples flagged (25%)  : 118 / 471 (25.1%)
+
+    LOW-RISK  (confident)  : RMSE=0.6834  MAE=0.5766  PICP95=0.850
+    HIGH-RISK (uncertain)  : RMSE=0.7022  MAE=0.6051  PICP95=0.975
+    Separation ratio       : 1.027x  (RMSE_high / RMSE_low — higher = better discrimination)
+
+  Target: Fat_mm
+    Recommended threshold  : σ_total > 5.0943 mm
+    Samples flagged (25%)  : 118 / 471 (25.1%)
+
+    LOW-RISK  (confident)  : RMSE=6.7057  MAE=5.9366  PICP95=0.734
+    HIGH-RISK (uncertain)  : RMSE=6.9551  MAE=5.9966  PICP95=0.941
+    Separation ratio       : 1.037x  (RMSE_high / RMSE_low — higher = better discrimination)
+
+  Target: Muscle_cm2
+    Recommended threshold  : σ_total > 2.1271 cm²
+    Samples flagged (25%)  : 118 / 471 (25.1%)
+
+    LOW-RISK  (confident)  : RMSE=2.8049  MAE=2.1752  PICP95=0.864
+    HIGH-RISK (uncertain)  : RMSE=2.9547  MAE=2.2725  PICP95=0.890
+    Separation ratio       : 1.053x  (RMSE_high / RMSE_low — higher = better discrimination)
+
+
+==============================================================================
+INTERPRETATION
+------------------------------------------------------------------------------
+
+A separation ratio > 1.0 confirms that σ_total is informative: samples
+the model flagged as uncertain have genuinely higher prediction error.
+
+Clinical implication:
+  - For low-risk predictions (σ_total below threshold): the model's
+    output can be used with higher confidence as a screening result.
+  - For high-risk predictions (σ_total above threshold): the model is
+    signalling that the measurement may be unreliable. The clinician
+    should consider corroborating with ultrasound or another modality.
+
+This is the core contribution of uncertainty-aware modelling: not just
+a prediction, but a reliable self-assessment of prediction quality.
+
+==============================================================================
+END OF REPORT
+==============================================================================

@@ -1,0 +1,16 @@
+# Core scientific stack
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+
+# Machine learning
+scikit-learn>=1.3
+xgboost>=2.0
+torch>=2.0
+
+# Data / plotting
+matplotlib>=3.7
+openpyxl>=3.1
+
+# RF / S-parameter parsing
+scikit-rf>=0.30
